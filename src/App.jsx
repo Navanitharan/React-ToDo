@@ -44,6 +44,8 @@ function App() {
       newArray=[...cards];
       setCards(newArray)
       setEdit(false)
+      setToDoName("Todo Name");
+      setToDoDesc("Todo Description");
     }
 
     const deleteToDo = (deleteCard)=>{
