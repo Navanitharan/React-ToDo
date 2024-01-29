@@ -6,18 +6,45 @@ function Head({Name,Desc,setName,setDesc,add,edit,save}) {
         <>
     <h3 className='text-center'>My todo</h3>
 
-    <div className="input d-flex justify-content-around m-4">
-        <div className="todoName col-3">
-            <input className='form-control' type="text" onChange={(e)=>{setName(e.target.value)}} value={Name}/>
-        </div>
-        <div className="todoName col-3">
-            <input className='form-control' type="text" onChange={(e)=>{setDesc(e.target.value)}} value={Desc}/>
-        </div>
-        <div className="todoName col-3">
-            {(!edit) ? <button className='form-control' type='submit' onClick={()=>add(Name,Desc)}>AddToDo</button>:
-            <button className='form-control' type='submit' onClick={()=>save(Name,Desc)}>Save</button>}
-        </div>
-    </div>
+    <div className="input m-4">
+  <div className="todoName mb-3">
+    <input
+      className='form-control '
+      type="text"
+      placeholder="Todo Name"
+      onChange={(e) => { setName(e.target.value) }}
+      value={Name}
+      required
+    />
+  </div>
+  <div className="todoName mb-3">
+    <input
+      className='form-control'
+      type="text"
+      placeholder="Todo Description"
+      onChange={(e) => { setDesc(e.target.value) }}
+      value={Desc}
+      required
+    />
+  </div>
+  <div className="todoName mb-3">
+    {(!edit) ? 
+      <input
+        className='form-control'
+        type='submit'
+        value="AddToDo"
+        onClick={() => add(Name, Desc)}
+      /> :
+      <input
+        className='form-control'
+        type='submit'
+        value="Save"
+        onClick={() => save(Name, Desc)}
+      />
+    }
+  </div>
+</div>
+
     </>
     )
 }

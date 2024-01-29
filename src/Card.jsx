@@ -22,7 +22,7 @@ function Card({card ,edit,del}) {
   };
 
   return (
-    <div className="card col-3 p-3 mt-4">
+    <div className="card col-s-10 col-md-5 col-lg-4 p-3 mt-4">
       <p>Name: {card.name}</p>
       <p>Description: {card.decs}</p>
 

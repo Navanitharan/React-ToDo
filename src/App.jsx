@@ -5,8 +5,8 @@ import Head from './head'
 import Filter from './Filter'
 import Card from './Card'
 function App() {
-    const [todoName, setToDoName] = useState("Todo Name")
-    const [todoDesc, setToDoDesc] = useState('Todo Description')
+    const [todoName, setToDoName] = useState("")
+    const [todoDesc, setToDoDesc] = useState('')
     const [cards, setCards] = useState([]);
     const [id,setId] = useState(1);
     const [edit,setEdit] = useState(false);
@@ -21,12 +21,11 @@ function App() {
     newArray = [...cards,{id,name,decs,status:"Not Completed"}]
     setCards(newArray);
     console.log(newArray)
-    setToDoName("Todo Name");
-    setToDoDesc("Todo Description");
+    setToDoName("");
+    setToDoDesc("");
     setId(id+1);
   }
   
-
      //for editing the todo details
      let editToDo = (card) => {
       setToDoName(card.name);
@@ -44,8 +43,8 @@ function App() {
       newArray=[...cards];
       setCards(newArray)
       setEdit(false)
-      setToDoName("Todo Name");
-      setToDoDesc("Todo Description");
+      setToDoName("");
+      setToDoDesc("");
     }
 
     const deleteToDo = (deleteCard)=>{
