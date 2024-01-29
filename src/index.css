@@ -16,6 +16,5 @@
 @media screen and (max-width:576px) {
     .input{
         flex-direction: column;
-        background-color: aqua;
     }
 }
