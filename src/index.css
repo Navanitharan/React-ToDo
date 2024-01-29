@@ -1,0 +1,11 @@
+.filter{
+    justify-content: center;
+    align-items: baseline;
+}
+.filter button{
+    text-align: start;
+    width: 140px;
+}
+.card{
+    background-color: #5dc176;
+}
