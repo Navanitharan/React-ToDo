@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 
 function Card({card ,edit,del}) {
   const [status, setStatus] = useState(card.status);
-  const [btnStyle, setBtnStyle] = useState(`btn ${status === 'Completed' ? 'btn-succes-emphasis' : 'btn-danger'} dropdown-toggle`);
+  const [btnStyle, setBtnStyle] = useState(`btn ${status === 'Completed' ? 'btn-success' : 'btn-danger'} dropdown-toggle`);
   const dropdownButtonRef = useRef(null);
 
   //Toggle the color of the status button
