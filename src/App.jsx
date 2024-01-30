@@ -17,10 +17,8 @@ function App() {
     let newArray;
   //Adding the cards 
   let addtoDO =(name,decs) =>{
-    console.log(name,decs)
     newArray = [...cards,{id,name,decs,status:"Not Completed"}]
     setCards(newArray);
-    console.log(newArray)
     setToDoName("");
     setToDoDesc("");
     setId(id+1);
@@ -30,14 +28,11 @@ function App() {
      let editToDo = (card) => {
       setToDoName(card.name);
       setToDoDesc(card.decs);
-      setUpdateCard(card)
-      console.log(updateCard,"edit function..")
+      setUpdateCard(card);
       setEdit(true);
     }
     //saving the updated data of the todo
     let savetodo = (name,decs)=>{
-      console.log("save....",name,decs)
-      console.log(updateCard,"save function..")
       updateCard.name=name;
       updateCard.decs=decs;
       newArray=[...cards];
